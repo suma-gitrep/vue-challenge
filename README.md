@@ -7,7 +7,7 @@
 ## Links
 
 - [Demo](https://suma-gitrep.github.io/vue-challenge/)
-- [Source](https://github.com/denisecase/js-gui-vue)
+- [Source](https://github.com/suma-gitrep/vue-challenge)
 
 ## Requirements
 
