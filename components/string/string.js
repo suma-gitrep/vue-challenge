@@ -25,7 +25,7 @@ const large = new Vue({
       const j = this.secondString
       const k=this.thirdString
       
-      return `${this.firstString},your multi is ${larger(i, j, k)}.`
+      return `your largest string is ${larger(i, j, k)}.`
     }
   }
 })
