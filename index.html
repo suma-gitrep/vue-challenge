@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <title>Vue.js App</title>
+
+  <meta name="description"
+    content="Client-side app showing two-way data binding with Vue.js - no build tools required.">
+
+  <!-- get current Bootstrap Material Design styles from https://mdbootstrap.com/md-bootstrap-cdn/ -->
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+
+  <!-- A bit of CSS required for sticky footer -->
+  <link href="index.css" rel="stylesheet">
+
+  <!-- Vue component styles -->
+  <link href="components/maximum/maximum.css" rel="stylesheet">
+  <link href="components/mult/multi.css" rel="stylesheet">
+  <link href="components/string/string.css" rel="stylesheet">
+
+
+
+</head>
+
+<body class="d-flex flex-column sticky-footer-wrapper">
+    <header>
+
+        <nav class="navbar navbar-expand-md">
+          <a class="navbar-brand" href="index.html">Finding maximum of two numbers along with other two components</a>
+          <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse"
+            data-target="#main-navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">My Calculation</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+          
+  <main class="container-fluid  flex-fill">
+
+    <div class="row">
+
+      
+
+      <article id="maximum" class="col-md-4 ">
+        
+        <h2>This one finds maximum number!</h2>
+
+        <fieldset class="mt-2">
+          <label for="first">Enter first number (1 to 100):</label>
+          <input v-model="first" id="first" type="number" min="1" max="100">
+          <span id="firstWarning" class="text-danger"></span>
+        </fieldset>
+
+        <fieldset class="mt-2">
+          <label for="second">Enter second number (1 to 100):</label>
+          <input v-model="second" id="second" type="number" min="1" max="100">
+          <span id="secondWarning" class="text-danger"></span>
+        </fieldset>
+
+        <h3 class="mt-2">{{maximumnum}}</h3>
+      </article>
+      
+      <article id="multiplier" class="col-md-4 ">
+        <h2>No build tools required!</h2>
+        <p>Here's another component.</p>
+        <p>This one subtracts!</p>
+
+        <fieldset class="mt-2">
+          <label for="first">Enter first number (1 to 100):</label>
+          <input v-model="firstNum" id="firstNum" type="number" min="1" max="100">
+          <span id="firstWarning" class="text-danger"></span>
+        </fieldset>
+
+        <fieldset class="mt-2">
+          <label for="second">Enter second number (1 to 100):</label>
+          <input v-model="secondNum" id="secondNum" type="number" min="1" max="100">
+          <span id="secondWarning" class="text-danger"></span>
+        </fieldset>
+        
+        <h3 class="mt-2">{{multiply}}</h3>
+      </article>
+      <article id="largerstring" class="col-md-4 ">
+        <h2>No build tools required!</h2>
+        <p>Here's another component.</p>
+        <p>This one large!</p>
+
+        <fieldset class="mt-2">
+          <label for="first">Enter first String (1 to 100):</label>
+          <input v-model="firstString" id="firstString" type="text" min="1" max="100">
+          <span id="firstWarning" class="text-danger"></span>
+        </fieldset>
+
+        <fieldset class="mt-2">
+          <label for="second">Enter second String (1 to 100):</label>
+          <input v-model="secondString" id="secondString" type="text" min="1" max="100">
+          <span id="secondWarning" class="text-danger"></span>
+        </fieldset>
+        <fieldset class="mt-2">
+          <label for="second">Enter second String (1 to 100):</label>
+          <input v-model="thirdString" id="thirdString" type="text" min="1" max="100">
+          <span id="secondWarning" class="text-danger"></span>
+        </fieldset>
+
+        <h3 class="mt-2">{{string}}</h3>
+      </article>
+
+     
+
+    </div>
+
+  </main>
+
+  <!-- sticky footer with padding on y-axis (top and bottom) -->
+
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">Right-click / Inspect / Console</span>
+      &#9670;
+      <a href="https://denisecase.github.io/js-gui-vue/">Demo</a>
+      &#9670;
+      <a href="https://github.com/denisecase/js-gui-vue">Source</a>
+    </div>
+  </footer>
+
+
+
+  <!-- get current Bootstrap Material Design styles from https://mdbootstrap.com/md-bootstrap-cdn/ -->
+
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+
+  <!-- Vue.js must be added before our custom code from https://cdnjs.com/libraries/vue -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+
+  <!-- Vue components -->
+
+  <script src="components/maximum/maximum.js"></script>
+  <script src="components/mult/multi.js"></script>
+  <script src="components/string/string.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+body,
+.sticky-footer-wrapper {
+  min-height: 100vh;
+}
+
+article {
+  background-color: aliceblue;
+  padding: 1em;
+  margin: 1em;
+}
+
+.navbar {
+	background: #6cb446;
+}
+
+.nav-link,
+.navbar-brand {
+	color: #fff;
+	cursor: pointer;
+}
+
+.nav-link {
+	margin-right: 1em !important;
+}
+
+.nav-link:hover {
+	color: #000;
+}
+
+.navbar-collapse {
+	justify-content: flex-end;
+}
